@@ -3,88 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background: #0078d7;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        nav {
-            margin: 1rem 0;
-            text-align: center;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #0078d7;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        section {
-            padding: 2rem;
-            max-width: 800px;
-            margin: auto;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background: #333;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <title>Jiayu Chen</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Personal Website</h1>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <div>
+                <h1 class="site-title">Jiayu Chen</h1>
+                <p class="site-subtitle">Personal site • projects • contact</p>
+            </div>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
     </header>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm Jiayu Chen, a passionate developer who loves creating applications and exploring new technologies.</p>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><a href="https://jiayuchn0330.github.io/SI649_Interactive_Vis.html" target="_blank">Energy and Climate: An Interactive Exploration of Our Warming Planet</a>
-                 SI649 Information Visualization final project.</li>
-        </ul>
-    </section>
-    
-    <section id="skills">
-        <h2>Skills</h2>
-        <h3>Programming Languages</h3>
-        <p>Python, C++, C, Shell, TCL, Verilog</p>
-        <h3>Framework & Tools</h3>
-        <p>Git, MySQL, Unity, Vim, Tableau, MATLAB</p>
-        <h3>Operating Systems</h3>
-        <p>Linux, MacOS, Windows</p>
 
-        <p></p>
-        <h2>Resume</h2>
-        <p>You can view my resume <a href="https://jiayuchn0330.github.io/resume.pdf" target="_blank">here</a>.</p>
-    </section>
+    <div class="layout">
+        <main class="card" aria-label="Main content">
+            <div class="card__body">
+                <section id="about">
+                    <h2>About</h2>
+                    <p>Hello! I’m Jiayu Chen, a developer who enjoys building software and exploring new technologies.</p>
+                </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>You can reach me at <a href="jiayuchn@umich.com">jiayuchn@umich.com</a>.</p>
-    </section>
+                <section id="projects">
+                    <h2>Projects</h2>
+                    <ul class="list">
+                        <li>
+                            <a href="SI649_Interactive_Vis.html">Energy and Climate: An Interactive Exploration of Our Warming Planet</a>
+                            <span class="muted">— SI649 Information Visualization final project</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="skills">
+                    <h2>Skills</h2>
+                    <h3>Programming Languages</h3>
+                    <p class="muted">Python, C++, C, Shell, TCL, Verilog</p>
+                    <h3>Frameworks & Tools</h3>
+                    <p class="muted">Git, MySQL, Unity, Vim, Tableau, MATLAB</p>
+                    <h3>Operating Systems</h3>
+                    <p class="muted">Linux, macOS, Windows</p>
+                    <h3>Resume</h3>
+                    <p><a href="resume.pdf" target="_blank" rel="noreferrer">View resume (PDF)</a></p>
+                </section>
+
+                <section id="contact">
+                    <h2>Contact</h2>
+                    <p>
+                        Email:
+                        <a href="mailto:jiayuchn@umich.com">jiayuchn@umich.com</a>
+                    </p>
+                </section>
+            </div>
+        </main>
+
+        <aside class="panel" aria-label="Calvin photos panel">
+            <div class="panel__header">
+                <h2 class="panel__title">Calvin</h2>
+                <p class="panel__subtitle">Photos from <code>/calvin</code></p>
+            </div>
+            <div class="panel__body">
+                <div data-calvin-gallery data-manifest="calvin/manifest.json"></div>
+                <p class="muted" style="margin: 10px 0 0; font-size: 12px;">
+                    To update: add images into <code>/calvin</code> and edit <code>calvin/manifest.json</code>.
+                </p>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="site-footer">
+        <div class="muted">© <span id="year"></span> Jiayu Chen</div>
+    </footer>
+
+    <script src="site.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
 </body>
 </html>

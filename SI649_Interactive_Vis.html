@@ -4,60 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Tableau Visualization</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        header {
-            background-color: #0078d4;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        main {
-            padding: 20px;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        footer {
-            background-color: #0078d4;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            position: absolute;
-            width: 100%;
-            bottom: 0;
-        }
-        .placeholder {
-            margin: 20px 0;
-            font-style: italic;
-            color: #777;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 <body>
-    <header>
-        <h1>Energy and Climate: An Interactive Exploration of Our Warming Planet</h1>
-        <p><b>SI 649 Interactive Visualization Project</b></p>
-        <p>by Jiayu Chen, Jinren Yuan, Shuo Qin</p>
-        <p>Original link: <a href="https://emirate0330.github.io/SI649_Interactive_Vis">https://emirate0330.github.io/SI649_Interactive_Vis</a></p>
-        <p> <a href ='/' >Go back to homepage</a></p>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
+    <header class="site-header">
+        <div class="site-header__inner">
+            <div>
+                <h1 class="site-title">Energy and Climate</h1>
+                <p class="site-subtitle"><b>SI 649 Interactive Visualization Project</b> • by Jiayu Chen, Jinren Yuan, Shuo Qin</p>
+                <p class="muted" style="margin: 6px 0 0;">
+                    Original link:
+                    <a href="https://emirate0330.github.io/SI649_Interactive_Vis" target="_blank" rel="noreferrer">emirate0330.github.io/SI649_Interactive_Vis</a>
+                </p>
+            </div>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="final.html">SI649 (alt)</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        
-        <div class="container">
+    <div class="layout">
+        <main class="card card--paper">
+            <div class="card__body">
+                <div class="container" style="background: transparent; border: 0; padding: 0; box-shadow: none;">
             <p style="text-align: left; color: black; font-size: 18px; font-family: serif, Georgia; margin: 10px 100px">
                 The climate crisis poses one of the most significant challenges of our time, with its impacts becoming increasingly evident through the rising frequency and intensity of climate-related disasters. This analysis explores the drivers of these phenomena, particularly the role of energy consumption and greenhouse gas emissions, while emphasizing the urgent need for a global transition to cleaner, sustainable energy sources. Through examining trends in disaster occurrences, emissions, and energy transitions, we would like to highlight the interconnectedness of climate change and its solutions.
             </p>
@@ -184,13 +156,28 @@
             </p>
 
             <div style="margin: 100px;"></div>
-        </div>
+                </div>
+            </div>
+        </main>
 
-    </main>
+        <aside class="panel" aria-label="Calvin photos panel">
+            <div class="panel__header">
+                <h2 class="panel__title">Calvin</h2>
+                <p class="panel__subtitle">Photos from <code>/calvin</code></p>
+            </div>
+            <div class="panel__body">
+                <div data-calvin-gallery data-manifest="calvin/manifest.json"></div>
+                <p class="muted" style="margin: 10px 0 0; font-size: 12px;">
+                    To update: add images into <code>/calvin</code> and edit <code>calvin/manifest.json</code>.
+                </p>
+            </div>
+        </aside>
+    </div>
 
-    <footer class="w3-container w3-center w3-margin-top">
-        <p class="w3-small">Jiayu Chen & Jinren Yuan & Shuo Qin © 2024</p>
+    <footer class="site-footer">
+        <div class="muted">Jiayu Chen • Jinren Yuan • Shuo Qin © 2024</div>
     </footer>
+    <script src="site.js"></script>
 </body>
 
 </html>

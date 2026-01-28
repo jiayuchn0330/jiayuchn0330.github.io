@@ -4,58 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Tableau Visualization</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        header {
-            background-color: #0078d4;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        main {
-            padding: 20px;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        footer {
-            background-color: #0078d4;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            position: absolute;
-            width: 100%;
-            bottom: 0;
-        }
-        .placeholder {
-            margin: 20px 0;
-            font-style: italic;
-            color: #777;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Energy and Climate: An Interactive Exploration of Our Warming Planetn</h1>
-        <p><b>SI 649 Interactive Visualization Project</b></p>
-        <p>by Jiayu Chen, Jinren Yuan, Shuo Qin</p>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
+    <header class="site-header">
+        <div class="site-header__inner">
+            <div>
+                <h1 class="site-title">Energy and Climate</h1>
+                <p class="site-subtitle"><b>SI 649 Interactive Visualization Project</b> • by Jiayu Chen, Jinren Yuan, Shuo Qin</p>
+            </div>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="SI649_Interactive_Vis.html">SI649 (full)</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        
-        <div class="container">
+    <div class="layout">
+        <main class="card card--paper">
+            <div class="card__body">
+                <div class="container" style="background: transparent; border: 0; padding: 0; box-shadow: none;">
             <p style="color: black; font-size: 20px; font-family: serif, Georgia; margin: 10px 100px">The climate crisis is one of the most urgent challenges humanity faces today, profoundly connected to our energy consumption. Rising global temperatures bring severe consequences, including devastating natural disasters, rising sea levels, and widespread socio-economic disruptions. Understanding the intricate relationship between energy use, emissions, and climate change is critical to combating this crisis.</p>
 
             <p style="color: black; font-size: 20px; font-family: serif, Georgia; margin: 10px 100px">This article analyzes climate change trends, examines the role of energy consumption in emissions, and explores the global transition toward sustainable energy sources. By understanding these dynamics, we can identify actionable solutions and work collectively toward a more sustainable future.</p>
@@ -180,13 +149,28 @@
             </p>
 
             <div style="margin: 100px;"></div>
-        </div>
+                </div>
+            </div>
+        </main>
 
-    </main>
+        <aside class="panel" aria-label="Calvin photos panel">
+            <div class="panel__header">
+                <h2 class="panel__title">Calvin</h2>
+                <p class="panel__subtitle">Photos from <code>/calvin</code></p>
+            </div>
+            <div class="panel__body">
+                <div data-calvin-gallery data-manifest="calvin/manifest.json"></div>
+                <p class="muted" style="margin: 10px 0 0; font-size: 12px;">
+                    To update: add images into <code>/calvin</code> and edit <code>calvin/manifest.json</code>.
+                </p>
+            </div>
+        </aside>
+    </div>
 
-    <footer class="w3-container w3-center w3-margin-top">
-        <p class="w3-small">Jiayu Chen & Jinren Yuan & Shuo Qin © 2024</p>
+    <footer class="site-footer">
+        <div class="muted">Jiayu Chen • Jinren Yuan • Shuo Qin © 2024</div>
     </footer>
+    <script src="site.js"></script>
 </body>
 
 </html>

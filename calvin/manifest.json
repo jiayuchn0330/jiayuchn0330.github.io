@@ -1,0 +1,12 @@
+{
+  "title": "Calvin Photos",
+  "description": "Photos from /calvin. Update this manifest to control ordering and captions.",
+  "images": [
+    { "src": "IMG_0332.JPG", "alt": "Calvin" },
+    { "src": "IMG_0334.PNG", "alt": "Calvin" },
+    { "src": "IMG_2096.jpeg", "alt": "Calvin" },
+    { "src": "IMG_2469.jpeg", "alt": "Calvin" },
+    { "src": "IMG_3706.JPG", "alt": "Calvin" },
+    { "src": "a20a0bd2990f3a40ffb20b34176a86f6.jpg", "alt": "Calvin" }
+  ]
+}
