@@ -1,0 +1,46 @@
+# ---- OS junk ----
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ---- Editor/IDE ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+*.bak
+*.orig
+
+# ---- Logs ----
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---- Node / frontend ----
+node_modules/
+dist/
+build/
+.parcel-cache/
+.next/
+out/
+.nuxt/
+.output/
+
+# ---- Jekyll / GitHub Pages (if you ever enable it) ----
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/bundle/
+
